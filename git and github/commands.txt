@@ -1,0 +1,59 @@
+git add filename
+git status
+git commit -m "message/comment"
+git push origin main
+git init
+
+git push origin main
+ 
+git remote add origin <link>
+git remote -v  ---- (to verify remote)
+git branch   ---- (to check branch)
+git branch -m main ---- (to set the name to "main")
+
+git commit -am "comment" ---- (This is used to add and commit together)
+after the above line we can push by using  "git push" not the "git push origin main"
+
+
+
+git branch  ---- (to check branch)
+git branch -m main ---- (to set the name to "main")
+git checkout <-branch name->  ---- (to navigate)
+git checkout -b <-name branch name->  ---- (to create new branch)
+git branch -d <- branch name ->  ---- (to delete branch)
+
+git diff <-branch name->  ---- (to compare commits, branches, files & more)
+git push --set-upstream origin feature ---- (This is used to push the new branch)
+git merge <-branch name->  ----(to merge 2 branches)
+or 
+"Create a PR"
+
+
+
+git pull origin main  ---- (used to fetch and download content from a remote repo and immediately update the local repo to match that content)
+
+
+
+// MERGE CONFLICTS ---- (An event that takes place when git is unable to automatically resolve differences in code between two commits)
+
+
+
+// FIXING MISTAKES
+
+CASE 1: staged changes--
+    git reset <filename>  ---- (to unstage)
+    git reset
+CASE 2: commited changes (for one commit)
+    git reset HEAD-1
+CASE 3: commited changes (for many commits)
+    git reset <- commit hash ->
+    git reset --hard <-commit hash-> 
+
+git log 
+
+
+
+// FORKING ---- (copying code from github to our repository)
+
+
+

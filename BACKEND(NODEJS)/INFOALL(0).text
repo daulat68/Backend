@@ -1,0 +1,29 @@
+npm - show available codes inside npm
+npm install figlet - This install npm figlet package
+
+
+node_modules - The node_modules folder containes every installed dependency for your project
+
+package-lock.json - It records the exact version of every installed dependency, including its sub-dependencies and their versions.
+
+package.json- The package.json file contains descriptive and functional metadata about a project, such as a name, version and dependencies
+
+for again installing node_modules - we can write 'npm install' in the figlet5 or any package we want. We don't have to necessarily send node_modules to anyone. 
+
+
+We can make our own 'package.json' - by 'npm init'.
+
+
+'npm install -g <package name>' - For installing any package globally. but we have to link it to the backend "npm link <package name>"
+
+
+{
+    Import or require use only one.
+
+We can't selectively load only the pieces we need with require but with import, we can selectively load only the pieces we need, which can save memory.
+
+Loading is synchronous for 'require' but can be synchronous for 'import'.
+
+For using import we had created a package.json and in last we have added  ' "type":"module" '
+
+}
