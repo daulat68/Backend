@@ -1,0 +1,68 @@
+use college     //creates database named college
+show dbs       // show all databases
+dbs             //shows current database
+
+show collections   // show all collections
+
+db.student.insertOne({name:"aman", age:19, marks:78})           //collection named student is created and inserted one document which automatically becomes primary key
+
+db.student.find()           // returns everything
+
+db.student.insertMnay({name:"ram", age:18, marks:70},{name:"aryan", age:20, marks:90})      // insert multiple documents into a collection
+
+db.student.findOne({age:21})            //find only one document where age is 21
+
+***Note- find() return an array of documents and it returns a cursor not actual documents
+
+db.student.find({marks:{$gt:75}})
+db.student.find({city:{$in:["Delhi","Mumbai"]}})
+db.student.find({$or:[{marks:{$gt:75}},{city:"Delhi"}]})
+
+***Note- Comparision Operator 
+$eq - equal to
+$ne - not equal to
+$gt - greater than
+$lt - less than
+$gte - greater than or equal to
+$lte - less than or equal to
+$in - in array
+$nin - not in array
+
+Logical Operator
+$and - and operator
+$or - or operator
+$nor - nor operator
+$not - not operator
+
+Element Operator 
+$exists - exists or not
+$type -  is used to check the data type of a field in a document
+
+Array Operator
+$all - all elements in array
+$elemMatch - element in array
+$size - is used to find documents where an array has an exact number of elements
+
+Miscellaneous Operators
+$mod - remainder of division of a value by a number
+$rand - generates random float between 0 and 1
+$natural - is used to retrieve documents in the order they are stored in MongoDB’s collection—either insertion order (forward) or reverse insertion order (most recent first).
+$currentDate
+$max
+$min
+$inc
+$sum
+
+
+Update 
+db.student.updateOne({name:"ram"},{$set:{age:21}})     
+db.student.updateMany({city:"Delhi"},{$set:{age:21}})    
+db.student.replaceOne({name:"bob},{name:"ayan", marks:90, age:13 })         //HERE THE ID REMAIN SAME   
+db.student.find{"performance.marks":88}         // here the object is like this-> {performance: {marks:88} }
+
+
+Delete in db
+
+db.student.deleteOne({name:"aman"})         // Delete the document where name is aman
+db.student.deleteOne({name:"aman", marks:{$gt:90}})        // Delete the document where name is aman and marks is greater than 90
+db.student.deleteMany({})         // Delete all with no conditions
