@@ -66,3 +66,5 @@ Delete in db
 db.student.deleteOne({name:"aman"})         // Delete the document where name is aman
 db.student.deleteOne({name:"aman", marks:{$gt:90}})        // Delete the document where name is aman and marks is greater than 90
 db.student.deleteMany({})         // Delete all with no conditions
+db.dropDatabase()       // Delete the database
+db.users.drop()         // Delete a collection, where users is name of the collection
